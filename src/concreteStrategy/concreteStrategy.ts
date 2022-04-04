@@ -6,8 +6,8 @@ import {Strategy} from '../strategy/strategy';
 export class BubbleSort implements Strategy {
   /**
    * Execute our algorithm to sort (in this case the BubbleSort)
-   * @param {number[]} data 
-   * @return {number} 
+   * @param {number[]} data Array that we will sort
+   * @return {number} Array sorted
    */
   public doAlgorithm(data: number[]): number[] {
     //We copy our array so we dont modify the original
@@ -40,9 +40,9 @@ export class BubbleSort implements Strategy {
  */
 export class MergeSort implements Strategy {
   /**
-   * 
-   * @param {number[]} data 
-   * @return {number[]} 
+   * Execute our algorithm to sort (in this case the MergeSort)
+   * @param {number[]} data Array that we will sort
+   * @return {number[]} Array sorted
    */
   public doAlgorithm(data: number[]): number[] {
     if (data.length <= 1) {
@@ -59,10 +59,10 @@ export class MergeSort implements Strategy {
   }
 
   /**
-   * 
-   * @param {number[]} listA 
-   * @param {number[]} listB 
-   * @return {number[]} 
+   * Second part to our MergeSort
+   * @param {number[]} listA First part of array to compare
+   * @param {number[]} listB Second part of array to compare
+   * @return {number[]} Array with the tow parts sorted
    */
   private sortedMerge(listA: number[], listB: number[]): number[] {
     const merged: number[] = [];
