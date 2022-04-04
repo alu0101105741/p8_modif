@@ -1,7 +1,7 @@
 {
-  "name": "practica7_modif",
+  "name": "p8_modif",
   "version": "1.0.0",
-  "description": "Práctica 7: Ejercicios - Eric Fumero (PE102)",
+  "description": "Práctica 8: Ejercicios - Eric Fumero (PE102)",
   "main": "index.js",
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alu0101105741/practica7_modif.git"
+    "url": "git+https://github.com/alu0101105741/p8_modif.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alu0101105741/practica7_modif/issues"
+    "url": "https://github.com/alu0101105741/p8_modif/issues"
   },
-  "homepage": "https://github.com/alu0101105741/practica7_modif#readme",
+  "homepage": "https://github.com/alu0101105741/p8_modif#readme",
   "devDependencies": {
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.1.0",
