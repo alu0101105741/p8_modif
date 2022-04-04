@@ -19,6 +19,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15.x
+      - name: Installing dependencies
+        run: npm install
       - name: Generating coverage information
         run: npm run coverage
       - name: SonarCloud Scan
