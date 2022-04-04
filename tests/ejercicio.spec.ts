@@ -1,17 +1,22 @@
 import 'mocha';
 import {expect} from 'chai';
-import {PrimeNumber} from '../src/ejercicio';
+import {Context, Strategy} from '../src/strategy/strategy';
+import {BubbleSort, MergeSort} from '../src/concreteStrategy/concreteStrategy';
 
-describe('Test block on modification (PrimeNumber)', () => {
-  const primos = PrimeNumber.getInstance();
+describe('Test block on modification (Strategy pattern)', () => {
+  const context = new Context(new BubbleSort());
 
-  it('primeNumbers(n)', () => {
-    expect(primos.primeNumbers(5)).to.eql([2, 3, 5, 7, 11]);
-    expect(primos.primeNumbers(10)).to.eql([2, 3, 5, 7, 11, 13, 17, 19, 23, 29]);
+  it('BubbleSort([6, 8, 4, 3, 1, 9])', () => {
+    expect(context.sayStrat()).to.equal('BubbleSort');
+    expect(context.execute()).to.eql([1, 3, 4, 6, 8, 9]);
   });
 
-  it('primeRange(n, m)', () => {
-    expect(primos.primeRange(1, 6)).to.eql([2, 3, 5, 7, 11, 13]);
-    expect(primos.primeRange(3, 11)).to.eql([5, 7, 11, 13, 17, 19, 23, 29, 31]);
+  it('Change strategy to MergeSort', () => {
+    context.setStrategy(new MergeSort());
+    expect(context.sayStrat()).to.equal('MergeSort');
+  });
+
+  it('MergeSort([6, 8, 4, 3, 1, 9])', () => {
+    expect(context.execute()).to.eql([1, 3, 4, 6, 8, 9]);
   });
 });
